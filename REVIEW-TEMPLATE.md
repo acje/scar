@@ -99,4 +99,4 @@ if assumptions break; otherwise finish unresolved/rejected or proceed to accepta
   intent_relevance, local_action, requested_response and confidence. Commander
   decides scope/allowance changes; routine planned return uses the outcome record.
 
-See [algorithm](ALGORITHM.html) and [paper scenarios](SCENARIOS.md).
+See [algorithm](ALGORITHM.html).

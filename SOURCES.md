@@ -64,5 +64,5 @@ Unavailable required evidence stays `Unknown`; a required unknown blocks
 acceptance. A research gap may remain only if the affected claim is excluded
 from acceptance, not converted to evidence through repeated review.
 
-See [algorithm](ALGORITHM.html), [template](REVIEW-TEMPLATE.md) and
-[scenarios](SCENARIOS.md) for the author-designed protocol, not product behavior.
+See [algorithm](ALGORITHM.html) and [template](REVIEW-TEMPLATE.md)
+for the author-designed protocol, not product behavior.

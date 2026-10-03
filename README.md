@@ -13,80 +13,18 @@ terminology from the cited sources.
 |---|---|
 | [Algorithm](ALGORITHM.html) | Adaptive lifecycle, environment, seven aspects and inline diagram |
 | [Review template](REVIEW-TEMPLATE.md) | Compact framing, review, finding and authority record |
-| [Worked scenarios](SCENARIOS.md) | Paper counterexamples and evidence/authority decisions |
 | [Source notes](SOURCES.md) | Observed material, adaptations and explicit research gaps |
 
-Adaptive **understand/change/verify** progression is the default where designs
-collide, especially during high churn. Frame proportionally, build a coherent
-increment, interleave checks, assess the coherent candidate, then refine or
-revisit understanding when assumptions break. Finish unresolved or rejected
-when appropriate; do not retry merely to obtain a clean verdict. Substantive
-review is not required after every edit. Exactly one active task at any time.
+The algorithm is the normative protocol; use the template to record its
+task-specific criteria, evidence, findings and authority decisions. Source notes
+separate author-designed adaptations from observed material and research gaps.
 
-## Seven aspects
+## Scope and limits
 
-1. Strategic significance — consequential value within the task's intent.
-2. Correctness — declared invariants and structural obligations.
-3. Accuracy — supported claims and explicit uncertainty.
-4. Structure and counterexamples — dependencies, exceptions and falsifiers.
-5. Economy — remove redundancy without sacrificing obligations.
-6. Ratchet integrity — protected obligations and acceptance authority.
-7. Structured environment — organized state, evidence and recoverability.
+This is documentation, not an executable workflow, security control, calibrated
+quality metric or convergence proof. No application test suite or separate local
+CI entry point is provided. Substantive judgement and designated acceptance
+authority remain necessary; committed document storage alone does not establish
+historical substantive acceptance.
 
-No improving aggregate score can conceal a failed required aspect. For example,
-`(0.9, 0.5)` becoming `(0.8, 0.8)` raises the mean while one aspect regresses.
-Aspect verdicts are `Satisfied | Violated | Unknown`; required unknowns block
-acceptance. Findings are allegations, adjudicated as
-`Supported | Unsupported | Unresolved`, not automatic instructions to edit.
-Review-of-review is targeted to concrete doubt, not a compulsory repeated pass.
-
-## Structured environment and ratchet
-
-The repository is the only codebase. Its exact main HEAD is current state;
-Git main is trunk-based history. The candidate is uncommitted repository changes
-based on that exact commit, with exact content identity, not another durable
-store. The scratchpad, typically Beads, holds intent, status, findings, decisions,
-uncertainties and evidence references for memory and communication; it is not
-an alternate codebase and cannot authorize acceptance.
-
-Advances are verified, authorized commits on main; corrections append to history.
-Preserve unrelated edits. Resume by reconciling main, candidate and scratchpad
-and checking which evidence still applies. Main is authoritative state, not
-automatic proof of quality. The ratchet protects obligations and authority;
-the structured environment makes state recoverable. They are distinct aspects.
-
-## Verification and authority boundary
-
-Task-specific shared protocol credits bound substantive work: declare positive
-initial work and a separate protected return reserve, bounded operation scopes
-and heterogeneous precharges. Retries, reviews and resume never reset charges.
-At 80% of initial work, or before a proposed charge reaches/crosses it, strongly
-signal prepare-to-return; affordable justified closure never relaxes acceptance.
-Exhaustion stops new substantive work; the reserve funds only its bounded report
-from existing records. See the algorithm and paper credit trace, not runtime guarantees.
-Mission command fixes intent/constraints while permitting local adaptation;
-material BackBrief goes to the commander, distinct from ordinary planned return.
-
-Run from the repository root:
-
-```sh
-python3 scripts/test_verify_docs.py
-python3 scripts/verify_docs.py
-git diff --check
-```
-
-The read-only checker covers local links, aspect names, lifecycle/diagram
-structure and selected textual obligations. It does not establish substantive
-correctness, validate external sources, execute SCAR, enforce authorization or
-prove convergence. Targeted tests exercise checker rejection, not protocol execution
-or semantic completeness. Paper scenarios require judgement review. This is not an
-executable workflow, security control or calibrated quality metric; no
-application test suite or separate local CI entry point is provided.
-
-Designated authority must authorize the exact candidate and baseline; the drafter
-cannot self-authorize. Standing authorization can be defined without requiring
-a human at every step. Confirm the resulting main commit matches the authorized
-candidate before claiming `Accepted`. Under edits-only authority, verified
-uncommitted work awaits review and designated commit authority; it does not
-advance main or claim protocol acceptance. Committed document storage alone
-does not establish historical substantive acceptance.
+Earlier versions and supporting material remain recoverable in Git history.
