@@ -10,6 +10,9 @@ Fill in a compact scratchpad record using the [normative algorithm](ALGORITHM.ht
 | Candidate | Exact base / scoped changes / content identity / unrelated edits: |
 | Roles | Drafter / reviewer / finding decision-maker / acceptance authority / overlaps / limits: |
 | Evidence | Exact target/context / sources/checks / uncertainties / reuse rationale: |
+| [Guidance loading](ALGORITHM.html#guidance) | Subject(s) / selected core, concerns and profiles / exact loaded file/content identity / reader and actual read/load witness / unavailable or unsupported coverage: |
+| Policy and defaults | Exact loaded binding caller house style / explicit task constraints / labeled provisional profile defaults / applicability and derived criteria / conflicts, decision owner and disposition: |
+| Guidance refresh | Changed guidance/policy identity / affected criteria, evidence and authorization / refresh or exact-context reuse reason: |
 | Position | [Lifecycle](ALGORITHM.html#lifecycle) position: |
 | Credits | [Work/reserve](ALGORITHM.html#credits) initial / spent / remaining; scopes / prices / shared precharge history: |
 | Return bound | Reserve-priced report / existing-record reconciliation / findings / pointers / accounting / upward return: |
@@ -29,6 +32,8 @@ Fill in a compact scratchpad record using the [normative algorithm](ALGORITHM.ht
 | Economy | |
 | Ratchet integrity | |
 | Structured environment | |
+
+Add applicable concern rows (audience usability/accessibility, security, maintainability) with the same criterion/evidence fields; justify applicability or omission. No extra universal requirements or mathematical independence are implied. Unsupported subjects and unavailable required guidance/checks remain Unknown; required Unknown blocks acceptance.
 
 [Finding](ALGORITHM.html#step-4) — repeat per finding:
 | Field | Fill in |
