@@ -1,8 +1,5 @@
 # Sources, adaptations and gaps
 
-Local: `gacr-ejk` (2026-10-02), workflows `gacr-5m7` (2026-10-03); “Observed”: read, not runtime/empirically validated.
-Locators: sections, not invented pages; user's field-usage premise is input, not empirical evidence.
-
 | Source and locator | Observed content | Adaptation and limit |
 |---|---|---|
 | [Bezos, 2016 letter](https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders), “High-Velocity Decision Making”, “Resist Proxies” | Reversible two-way decisions: lighter process; qualified ~70% of desired information advice; disagree and commit; escalate misalignment; process is not the thing | [Frame/increment](ALGORITHM.html#step-1); source advice establishes neither mandatory information percentage nor permission to ignore required evidence |
