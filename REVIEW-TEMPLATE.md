@@ -16,6 +16,8 @@ Exactly one active task at any time.
 | Roles | Drafter, reviewer, finding decision-maker and designated acceptance authority; overlaps and limits |
 | Evidence | Exact target/context, source/check references, uncertainties and reuse rationale |
 | Task status | Frame and understand; Coherent increment; Check and assess; Resolve findings and refine; Accept and advance main; Record outcome and select next task |
+| Credits | Initial/remaining work and protected return reserve; bounded scopes and heterogeneous prices; precharge history shared across attempts/participants; no refunds/reset |
+| Return bound | Reserve-priced minimal outcome, main/candidate reconciliation from existing records, findings/evidence/accounting and upward return; no substantive work |
 
 ## Coherent increment and assessment
 
@@ -39,6 +41,12 @@ checks and missing evidence are Unknown, not violations or satisfaction.
 Any required Unknown blocks acceptance. Investigate unknowns when useful;
 explicitly excluded claims cannot be presented as established.
 
+Bind each conclusion compactly: claim/criterion → exact target/base and
+criteria/context identity → witness locator and result → witness-to-conclusion reasoning
+→ uncertainty and applicability. A locator without derivation is not a justified
+conclusion. Corrected reviews refresh affected derivations even when the candidate
+is unchanged; reuse needs exact unchanged content/context and a reason.
+
 ## Resolve findings and refine
 
 | Field | Content per finding |
@@ -61,6 +69,9 @@ if assumptions break; otherwise finish unresolved/rejected or proceed to accepta
 
 ## Accept, advance and record
 
+- Readiness within position 4: one compact record names exact candidate/base,
+  current required evidence/conclusions, resolved required findings, remaining
+  credit for the bounded acceptance attempt and any blockers; no extra position.
 - Eligibility: exact candidate/base, current applicable evidence, required criteria,
   supported repairs and resolved required findings; compare protected obligations.
 - Authorization: designated authority, exact candidate content identity, expected
@@ -75,5 +86,17 @@ if assumptions break; otherwise finish unresolved/rejected or proceed to accepta
 - Resume: reconcile exact main, candidate and scratchpad; justify evidence reuse
   or refresh; append corrections rather than rewrite history. Select the next
   task only after recording this task's outcome.
+- Credit stop: at/crossing 80% of initial work, signal prepare-to-return with a
+  justified bounded closure plan. If the next operation is unaffordable, halt
+  new substantive work; required gaps remain Unknown, never credit-based acceptance.
+  Use only the protected reserve for its declared report from existing records.
+- Continuation: position/outcome, stop reason, exact main/candidate identities,
+  evidence/uncertainty/findings, initial/spent/remaining work and reserve, next
+  affordable action and conditions/authority to resume. Preserve charges after
+  interruption; no retry/review/session reset. Actual interrupted commits need
+  reconciliation, not an assumed unchanged main.
+- Material BackBrief, when warranted: trigger, scope, cited observation,
+  intent_relevance, local_action, requested_response and confidence. Commander
+  decides scope/allowance changes; routine planned return uses the outcome record.
 
 See [algorithm](ALGORITHM.html) and [paper scenarios](SCENARIOS.md).

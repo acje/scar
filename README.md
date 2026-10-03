@@ -57,9 +57,20 @@ the structured environment makes state recoverable. They are distinct aspects.
 
 ## Verification and authority boundary
 
+Task-specific shared protocol credits bound substantive work: declare positive
+initial work and a separate protected return reserve, bounded operation scopes
+and heterogeneous precharges. Retries, reviews and resume never reset charges.
+At 80% of initial work, or before a proposed charge reaches/crosses it, strongly
+signal prepare-to-return; affordable justified closure never relaxes acceptance.
+Exhaustion stops new substantive work; the reserve funds only its bounded report
+from existing records. See the algorithm and paper credit trace, not runtime guarantees.
+Mission command fixes intent/constraints while permitting local adaptation;
+material BackBrief goes to the commander, distinct from ordinary planned return.
+
 Run from the repository root:
 
 ```sh
+python3 scripts/test_verify_docs.py
 python3 scripts/verify_docs.py
 git diff --check
 ```
@@ -67,13 +78,15 @@ git diff --check
 The read-only checker covers local links, aspect names, lifecycle/diagram
 structure and selected textual obligations. It does not establish substantive
 correctness, validate external sources, execute SCAR, enforce authorization or
-prove convergence. Paper scenarios require judgement review. This is not an
+prove convergence. Targeted tests exercise checker rejection, not protocol execution
+or semantic completeness. Paper scenarios require judgement review. This is not an
 executable workflow, security control or calibrated quality metric; no
 application test suite or separate local CI entry point is provided.
 
 Designated authority must authorize the exact candidate and baseline; the drafter
 cannot self-authorize. Standing authorization can be defined without requiring
 a human at every step. Confirm the resulting main commit matches the authorized
-candidate before claiming `Accepted`. This documentation mission authorizes
-edits only: its verified uncommitted implementation awaits review and designated
-commit authority, and does not advance main or claim protocol acceptance.
+candidate before claiming `Accepted`. Under edits-only authority, verified
+uncommitted work awaits review and designated commit authority; it does not
+advance main or claim protocol acceptance. Committed document storage alone
+does not establish historical substantive acceptance.

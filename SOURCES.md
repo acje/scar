@@ -25,6 +25,26 @@ integrity protects obligations/authority; Structured environment organizes main,
 candidate and scratchpad for recoverability. Sources do not prove convergence,
 reviewer infallibility or quality simply from procedure.
 
+## Local backport and mission command provenance
+
+Original bounded-work/first-acceptance evidence is retained in `gacr-0nf` and
+historical observation `gacr-wee`. Current local comparison `gacr-t1w`, orientation
+`gacr-3ie` and oracle `gacr-ejx` constrain the compatible backport: retain six
+adaptive positions, seven aspects and exact main/uncommitted-candidate structure.
+Shared heterogeneous precharges, separate protected return credit and the 80%
+initial-work signal are new author requirements, not old guarantees or empirical
+calibration. They do not import the historical lifecycle or acceptance store.
+
+Mission command and the seven-field material BackBrief adapt actual fleet
+`AGENTS.md`, Directed Opportunism and Back-brief protocol sections. Its Review loop
+architectural-misalignment circuit-breaker distinguishes repeat same-class
+rejections from persistent new classes and excessive defensive scaffolding;
+pause/orient precedes structured operator choices. Source reads/locators live in
+`gacr-t1w`; these are doctrine, not observed model performance. No ADR corpus
+was found by `gacr-ejx`, and no new external evidence is claimed. Credit prices,
+reserve capacity, thresholds and paper traces provide no runtime enforcement or
+guarantee of delivery on an unavailable host.
+
 ## Research gaps retained
 
 - The original Bezos 2015 letter text was not verified: direct URLs returned

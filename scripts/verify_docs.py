@@ -76,6 +76,10 @@ def verify():
                 else:
                     require(False, f"{name}: unchecked Markdown anchor {link}")
     require(len(parsed.ids) == len(set(parsed.ids)), "algorithm: duplicate IDs")
+    require({i for i in parsed.ids if i.startswith("step-")} == {f"step-{i}" for i in range(1, 7)},
+            "algorithm: lifecycle IDs mismatch")
+    require({i for i in parsed.ids if i.startswith("node-")} == {f"node-{i}" for i in range(1, 7)},
+            "algorithm: diagram IDs mismatch")
     for i, step in enumerate(STEPS, 1):
         require(f"step-{i}" in parsed.ids and f"node-{i}" in parsed.ids,
                 f"algorithm: missing lifecycle/diagram state {i}")
@@ -86,10 +90,15 @@ def verify():
         "ALGORITHM.html": ("Exactly one active task", "Supported", "Unsupported", "Unresolved", "Unknown",
                            "required Unknown blocks acceptance", "drafter cannot self-authorize",
                            "confirm the main commit matches", "corroborates; it does not confer acceptance",
-                           "preserve unrelated edits", "resume", "standing authorization", "concrete doubt"),
+                           "preserve unrelated edits", "resume", "standing authorization", "concrete doubt",
+                           "initial work allocation", "protected return reserve", "debit before",
+                           "no refunds or silent reset", "80% of initial work", "cannot fund substantive work",
+                           "insufficient for the next operation", "no new substantive work",
+                           "intent_relevance", "requested_response", "local_action", "confidence"),
         "REVIEW-TEMPLATE.md": ("exact main", "content identity", "Supported", "Unsupported", "Unresolved",
-                               "required Unknown blocks acceptance", "reuse", "authority"),
-        "SCENARIOS.md": tuple(f"P{i}" for i in range(1, 13)),
+                               "required Unknown blocks acceptance", "reuse", "authority",
+                               "witness-to-conclusion reasoning", "Readiness within position 4"),
+        "SCENARIOS.md": tuple(f"P{i}" for i in range(1, 13)) + ("P13 First acceptance",),
         "README.md": ("python3 scripts/verify_docs.py", "Exactly one active task", "high churn"),
         "SOURCES.md": ("gacr-5m7", "author-designed", "not runtime verification"),
     }
