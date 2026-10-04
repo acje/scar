@@ -27,6 +27,7 @@ Unsupported subjects or unavailable required guidance remain **Unknown**: explic
 - Static embedded SVG explanation: core + diagrams + HTML + audience when reader access is in scope. Read-level equivalence does not establish browser/AT behavior.
 - PowerPoint diagram: core + PowerPoint + diagrams + audience when applicable; inspect delivered export, not just source deck.
 - Uncatalogued spreadsheet: core questions still apply, subject guidance is Unknown until scoped guidance is obtained; no silent HTML substitution.
+- jj workflow documentation: core + maintainability + HTML/diagrams for the normative page and supplementary SVG; security/audience for authority, scratch secrecy limits and reader misuse. Read the [workflow's primary jj citations](../JJ-WORKFLOW.md) as source guidance; no jj subject profile or runtime enforcement is supplied by this catalogue. Configuration and candidate commits alone cannot establish acceptance.
 
 ## Local check
 Run `python3 scripts/check_skills.py`, `python3 -m unittest discover -s tests -p 'test_*.py'`, and `git diff --check` from the repository root. The checker validates exactly eight paths, constrained frontmatter, required sections and local Markdown file/HTML-anchor links. It does not validate arbitrary YAML, Markdown anchors, HTML links, external availability, prose truth, runtime loading or substantive review quality. Source support and gaps are in the [audit](../SOURCE-AUDIT.md).

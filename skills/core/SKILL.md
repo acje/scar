@@ -16,7 +16,7 @@ Consider all seven aspects for every SCAR task, including review targets. Declar
 | Structure and counterexamples | Draw dependency/exception paths; try an alternative reading and a concrete falsifier for the leading conclusion. | A direct caller, exception or omitted premise reverses it. |
 | Economy | Identify duplicated work/criticism; simulate deletion against protected obligations and required evidence. | Shorter text removes a necessary qualification or witness. |
 | Ratchet integrity | Trace per-aspect protection, finding adjudication and exact designated authority; compare required obligations individually. | Averaging, stale authorization or self-authorization bypasses a failure. |
-| Structured environment | Reconstruct main/base/candidate/scratchpad identities and resume state from the record; test evidence reuse against unchanged context. | Filename-only identity hides changed content. |
+| Structured environment | Reconstruct unique accepted main ID, exact base and uncommitted content or ordered jj revision/parent/introduced-content identities; reconcile Beads and owned ephemeral scratch pointers; test evidence reuse against unchanged context. | Filename, change ID, @ or bookmark name hides changed content; committed candidate is mistaken for Accepted. |
 
 ## Evidence and output
 Record criterion → exact target/base/criteria/context → witness locator/result → reasoning → uncertainty/applicability, with Satisfied | Violated | Unknown and counterexample/omission rationale. For a review target inspect the allegation's support, not automatically the candidate. Disposition belongs at protocol position 4.

@@ -14,7 +14,10 @@ resolve it or separately authorize a changed contract without claiming preservat
 
 Acceptance authorizes exact candidate content, expected main baseline, scope and
 criteria/evidence context. Changes invalidate affected authorization. Recheck before
-the authorized commit, then confirm resulting HEAD and exact content.
+the authorized main advancement, then confirm the unique resulting accepted main
+commit and exact content. For jj stacks cover every introduced prefix revision,
+parent and content; C1 authority does not cover C2. Rewrites/reparenting invalidate
+affected authority. External writer exclusion is a prerequisite, not a jj guarantee.
 
 ## Example
 
@@ -24,8 +27,8 @@ explicitly changed contract; do not claim the old protection still holds.
 
 ## Limits
 
-Edits-only verified work is not Accepted. Scratchpad records corroborate but cannot
-substitute for an actual authorized commit. Denied, stale or interrupted acceptance
+Edits-only or mutable committed candidate work is not Accepted. Scratchpad records corroborate but cannot
+substitute for actual authorized main advancement. Denied, stale or interrupted acceptance
 is Unresolved. Corrections append authorized commits rather than erasing decisions.
 This is protocol authority, not a claim of implemented runtime security.
 
