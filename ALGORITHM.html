@@ -44,12 +44,15 @@ Do not place secrets there; redact evidence before durable storage. Existing <co
 quality/historical substantive acceptance. Resolve <code>refs/heads/main</code>, not arbitrary checkout HEAD;
 record full commit ID and resolution context. Missing or stale accepted state is Unknown/Unresolved:
 never fall back to <code>HEAD</code> or a remote last-seen position.</p>
-<p><strong>History</strong> Git main, trunk-based; advancement follows <a href="#authority">authority</a>.</p>
+<p><strong>History</strong> Git main, trunk-based; advancement follows <a href="#authority">authority</a>.
+Declare the full accepted history baseline ID and observation context. After that declared baseline, every accepted
+successor is a single-parent append-only commit whose sole parent is the immediately preceding exact accepted main.
+No merges or accepted-history rewriting; inherited history at or before the baseline is not certified by this rule.</p>
 <p><strong>Candidate</strong> One scoped Git candidate, bound to exact accepted main base/content identity.
 Transitional repository work, not a second codebase; snapshot/commit existence is not acceptance.</p>
 <p id="candidate-stack">Use <a href="GIT-WORKFLOW.md">ordinary Git</a>: inspect status, diff, staged diff and log;
 draft and run declared tests; review exact content; add explicit scoped paths and commit only when designated authority
-permits. No jj, candidate stack, feature branch, advanced Git plumbing, bespoke gate, lock, permission system or daemon
+permits. No candidate stack, feature branch, advanced Git plumbing, bespoke gate, lock, permission system or daemon
 is required. If candidate commits already exist, record their full IDs and introduced content, not merely a net diff.
 Changed candidate/base/context invalidates affected evidence and authorization. Preserve unrelated staged, unstaged and
 untracked work; unavailable identities remain Unknown. This cooperative workflow cannot prevent external copies,
@@ -174,13 +177,15 @@ Candidate commits can already exist: creation is not this acceptance boundary. A
 parallel observers/reviewers do not write the candidate. Recheck actual accepted main, expected baseline, candidate,
 staged content and context before authorized ordinary Git add/commit. No race-free acceptance or implemented exclusion
 is claimed; unexpected writers/main movement require reconciliation, not overwrite. After advancement confirm exact
-content and uniquely resolved resulting accepted main commit before claiming Accepted, never merely from intent.
+content, sole parent matching the expected accepted main, and uniquely resolved resulting accepted main commit before
+claiming Accepted, never merely from intent. Post-declared-baseline acceptance is single-parent append-only, never a merge.
 Commit/push forbidden or authority absent means preserve the candidate without advancement. Denied/stale/interrupted
 acceptance is Unresolved; rejected/unresolved candidates do not advance through this protocol.
 Use <a href="#reconciliation">reconciliation</a> for interruptions/main movement.</p>
 <p>Edits-only or candidate commits: verified work awaits review/designated advancement authority, not Accepted. First acceptance requires
 <a href="#readiness">eligibility</a> even without past main quality evidence; syntax alone is insufficient.
-Corrections append authorized commits, never erase decisions; mistaken acceptance needs a new corrective task.</p>
+Corrections append authorized single-parent commits, never erase decisions; mistaken acceptance needs a new corrective task.
+Never rewrite, amend, rebase, reset or force-push accepted history after the declared baseline.</p>
 <p><a href="SOURCES.md">Sources and gaps</a> · <a href="REVIEW-TEMPLATE.md">Template</a></p>
 <p>No external assets, scripts or runtime dependencies.</p>
 <section id="graph"><h2>Supplementary environment and lifecycle diagram</h2>
@@ -192,7 +197,7 @@ These general stops are not all drawn.</p>
 <figure class="diagram" tabindex="0" role="group" aria-label="Scrollable SCAR environment and progression">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 1180" role="img" aria-labelledby="svg-title svg-desc">
 <title id="svg-title">Structured environment: Scratchpad, Current state, History, Candidate and SCAR lifecycle</title>
-<desc id="svg-desc">Four components organize the Structured environment. Beads is durable memory and communication; .scratchpad is an owned ephemeral adjunct, neither codebase nor acceptance authority. Current state is the uniquely resolved exact accepted main commit, not arbitrary HEAD and not proof of historical quality. History is trunk-based Git main. One drafter owns one scoped Git candidate with exact accepted base and content; commits alone are not acceptance. Parallel observers and reviewers do not edit it. Only the repository is a codebase; preserve unrelated edits. Six documentary lifecycle positions follow, not executable components. Frame, construct, check and resolve findings; refinement returns to understanding or construction, rejected or unresolved work finishes. Eligible work needs exact authority and main advancement confirmation, then outcome recording before the next task. No enforced writer exclusion is claimed. General stops without acceptance are not all drawn. The numbered lifecycle governs.</desc>
+<desc id="svg-desc">Four components organize the Structured environment. Beads is durable memory and communication; .scratchpad is an owned ephemeral adjunct, neither codebase nor acceptance authority. Current state is the uniquely resolved exact accepted main commit, not arbitrary HEAD and not proof of historical quality. History is trunk-based Git main: accepted successors after a declared baseline are single-parent append-only, each parent the preceding exact accepted main, with no merges or accepted-history rewriting. Inherited history is not certified. One drafter owns one scoped Git candidate with exact accepted base and content; commits alone are not acceptance. Parallel observers and reviewers do not edit it. Only the repository is a codebase; preserve unrelated edits. Six documentary lifecycle positions follow, not executable components. Frame, construct, check and resolve findings; refinement returns to understanding or construction, rejected or unresolved work finishes. Eligible work needs exact authority, sole-parent and main advancement confirmation, then outcome recording before the next task. No enforced writer exclusion is claimed. General stops without acceptance are not all drawn. The numbered lifecycle governs.</desc>
 <rect id="structured-environment" class="enclosure" x="10" y="10" width="1020" height="1160" rx="14"/>
 <text class="heading" x="35" y="45">Structured environment</text>
 <text class="sub" x="35" y="72">Enclosures group roles; only arrowheads denote lifecycle transitions. No execution architecture is implied.</text>
@@ -214,8 +219,8 @@ These general stops are not all drawn.</p>
 <g id="history-component">
 <rect class="card" x="55" y="301" width="655" height="72" rx="10"/>
 <text class="label" x="70" y="325">History</text>
-<text class="sub" x="70" y="346">Git main · trunk-based</text>
-<text class="sub" x="70" y="366">Advancement follows authority</text>
+<text class="sub" x="70" y="346">Git main · single-parent append-only after declared baseline</text>
+<text class="sub" x="70" y="366">Authorized successors · no merges / accepted-history rewriting</text>
 </g>
 <text class="sub" x="55" y="388">Record scope and preserve unrelated edits.</text>
 <text class="sub" x="55" y="409">Identify exact content by scoped digest/snapshot, including new files and deletions.</text>
@@ -248,7 +253,7 @@ These general stops are not all drawn.</p>
 <g id="node-2"><rect class="card" x="370" y="50" width="260" height="80" rx="10"/><text class="label" x="385" y="80">2 Coherent increment</text><text class="sub" x="385" y="105">Build · interleave checks</text></g>
 <g id="node-3"><rect class="card" x="690" y="50" width="260" height="80" rx="10"/><text class="label" x="705" y="80">3 Check and assess</text><text class="sub" x="705" y="105">Criteria · scoped evidence</text></g>
 <g id="node-4"><rect class="card" x="370" y="240" width="260" height="80" rx="10"/><text class="label" x="385" y="270">4 Resolve findings and refine</text><text class="sub" x="385" y="295">Adjudicate · refresh conclusions</text></g>
-<g id="node-5"><rect class="card" x="350" y="395" width="300" height="80" rx="10"/><text class="label" x="365" y="425">5 Accept and advance main</text><text class="sub" x="365" y="450">Exact authority · commit confirmation</text></g>
+<g id="node-5"><rect class="card" x="350" y="395" width="300" height="80" rx="10"/><text class="label" x="365" y="425">5 Accept and advance main</text><text class="sub" x="365" y="450">Authority · sole parent / main confirmed</text></g>
 <g id="node-6"><rect class="card" x="330" y="550" width="340" height="80" rx="10"/><text class="label" x="345" y="580">6 Record outcome and select next task</text><text class="sub" x="345" y="605">Main · candidate · scratchpad reconcile</text></g>
 <g class="edge-label" data-for="4-1"><rect x="135" y="183" width="220" height="44" rx="12"/><text class="sub"><tspan x="147" y="201">Assumptions break</tspan><tspan x="147" y="218"> → understand</tspan></text></g>
 <g class="edge-label" data-for="4-2"><rect x="422.5" y="170" width="155" height="26" rx="12"/><text class="sub" x="434.5" y="188">Continue building</text></g>
@@ -268,7 +273,9 @@ not six implemented services. Repository components do not add lifecycle positio
 <li><strong>Scratchpad:</strong> Beads stores durable cross-agent records; owned workspace-local .scratchpad is an
 ephemeral adjunct under the environment's retention/recovery/secrets limits. Neither confers acceptance authority.</li>
 <li><strong>Current state:</strong> uniquely resolved exact accepted main commit is current authority, not arbitrary HEAD or proof of historical quality.</li>
-<li><strong>History:</strong> Git main, trunk-based; advancement follows <a href="#authority">authority</a>.</li>
+<li><strong>History:</strong> Git main, trunk-based; after the declared baseline, authorized accepted successors are
+single-parent append-only, sole parent the preceding exact accepted main; no merges or accepted-history rewriting.
+Inherited history is not certified; advancement follows <a href="#authority">authority</a>.</li>
 <li><strong>Candidate:</strong> one scoped Git candidate with exact accepted base/content; one drafter,
 parallel observation/review, transitional and not Accepted merely because committed.</li>
 </ul>

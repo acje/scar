@@ -6,7 +6,7 @@ Fill in a compact scratchpad record using the [normative algorithm](ALGORITHM.ht
 |---|---|
 | [Frame](ALGORITHM.html#step-1) | Objective / audience / consequence / scope / protected obligations: |
 | Criteria | Required criteria / applicability / revisions: |
-| [Environment](ALGORITHM.html#environment) | Repository / refs/heads/main unique full accepted commit ID / resolution context / observed history baseline and endpoint / Beads record: |
+| [Environment](ALGORITHM.html#environment) | Repository / refs/heads/main unique full accepted commit ID / resolution context / declared baseline full ID and observed endpoint / post-baseline single-parent append-only accepted successors, no merges or accepted-history rewriting / inherited-history and witness limits / Beads record: |
 | Scratch adjunct | .scratchpad owner / recovery pointers in Beads / retention deadline and owned cleanup / redaction and no-secrets limits; .ooda unchanged: |
 | Candidate | One exact accepted base and scoped candidate bytes/digests including new files/deletions / any existing candidate commits and introduced content / preserved unrelated staged, unstaged and untracked edits: |
 | Roles | One drafter / parallel observers and reviewers (no candidate edits) / finding decision-maker / acceptance authority / overlaps / permitted operations including commit/push limits: |
@@ -18,7 +18,7 @@ Fill in a compact scratchpad record using the [normative algorithm](ALGORITHM.ht
 | Credits | [Work/reserve](ALGORITHM.html#credits) initial / spent / remaining; scopes / prices / shared precharge history: |
 | Return bound | Reserve-priced report / existing-record reconciliation / findings / pointers / accounting / upward return: |
 | [Readiness / eligibility](ALGORITHM.html#readiness) | Exact candidate/base / current required evidence/conclusions / resolved required findings / protected comparison / acceptance credit / blockers: |
-| [Authorization / advance](ALGORITHM.html#authority) | Authority / standing authorization / exact scoped candidate content and expected accepted main / criteria/evidence context / decision and operation limits / cooperative writer agreement and observation limits / status, diff, staged-content precheck / resulting unique accepted main and content confirmation: |
+| [Authorization / advance](ALGORITHM.html#authority) | Authority / standing authorization / exact scoped candidate content and expected accepted main / criteria/evidence context / decision and operation limits / cooperative writer agreement and observation limits / status, diff, staged-content precheck / resulting unique accepted main, exact content and sole parent matching expected accepted main confirmation: |
 | [Outcome / resume](ALGORITHM.html#step-6) | Outcome / resulting accepted main full ID / candidate disposition / findings / uncertainties / evidence / identity reconciliation / affected base or context refresh / append-only corrective task if needed: |
 | [Continuation](ALGORITHM.html#continuation) | Position/outcome / stop reason / exact main/candidate / evidence/uncertainty/findings / initial-spent-remaining work and reserve / next affordable action / resume conditions/authority: |
 | [Material BackBrief](ALGORITHM.html#mission-command) | trigger / scope / cited observation / intent_relevance / local_action / requested_response / confidence: |

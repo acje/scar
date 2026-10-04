@@ -21,8 +21,9 @@ precharged bounded operation may finish.
 
 An executor has enough credit for a short verification but not another research
 round. It chooses bounded closure rather than spending the protected return reserve
-on investigation. The return records the exact candidate (uncommitted content or
-ordered committed jj stack), accepted base and blockers; it does not advance main.
+on investigation. The return records the exact scoped ordinary-Git candidate content,
+any existing candidate commit IDs and introduced content, accepted base and blockers;
+it does not advance main.
 
 ## Limits
 

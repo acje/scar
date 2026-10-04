@@ -10,11 +10,13 @@ The repository alone is the codebase. Beads carries durable cross-agent intent,
 findings, decisions and evidence pointers; owned `.scratchpad/` is an ephemeral
 adjunct with recovery pointers and retention deadline in Beads, never secrets or authority.
 Ignoring it does not untrack existing content or ensure secrecy/cleanup; `.ooda/` is unchanged.
-Current state is the uniquely resolved exact accepted main commit, not arbitrary HEAD,
-jj `@`, a change ID or proof of historical quality. History is trunk-based Git main.
-Candidate is scoped uncommitted content or a mutable committed jj stack bound to that
-base, with exact ordered full revision IDs, sole parents and all introduced content,
-including new files and deletions. Candidate commits are not acceptance.
+Current state is the uniquely resolved exact accepted main commit, not arbitrary HEAD
+or proof of historical quality. History is trunk-based Git main: after a declared baseline,
+accepted successors are single-parent append-only, sole parent the preceding exact accepted
+main; no merges or accepted-history rewriting. Inherited history is not certified.
+One named drafter owns one scoped ordinary-Git candidate bound to exact accepted base/content,
+including new files and deletions. Record any existing candidate commit full IDs and introduced
+content; candidate commits are not acceptance. Parallel observers/reviewers do not edit it.
 
 On interruption, reconcile actual main, candidate and scratchpad before continuing.
 If main moved, reconcile rather than overwrite; refresh affected evidence and authority.
