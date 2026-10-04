@@ -1,0 +1,29 @@
+# Ordinary Git SCAR workflow
+
+The [protocol](ALGORITHM.html#environment) and [authority boundary](ALGORITHM.html#authority) govern. Use existing Git and project checks, not a new VCS, custom gate, lock, permission system or daemon. One named drafter owns one active candidate for one task; observers and reviewers may work in parallel without editing that candidate. This is cooperative doctrine, not prevention of noncooperating writers, external copies or offline edits.
+
+## Observe and frame
+
+From the named repository, inspect `git status --porcelain=v1 --untracked-files=all`, `git diff`, `git diff --cached` and `git log --oneline -10`. Resolve accepted main with `git rev-parse --verify refs/heads/main^{commit}` and record its full ID and observation context. HEAD is checkout context, not fallback acceptance authority. Missing or stale accepted state is Unknown/Unresolved.
+
+Record scope, baseline dirty/untracked/staged work, drafter, reviewer, decision-maker, acceptance authority and permitted operations in [the template](REVIEW-TEMPLATE.md). Identify the exact candidate including new files and deletions using scoped bytes/digests or snapshots. Do not reset, overwrite, clean or stage unrelated work. No feature branch or candidate stack is required.
+
+## Draft, check and review
+
+The drafter makes small coherent increments within the one candidate. Observers/reviewers inspect exact content and return evidence/findings, not competing edits. Run the task's declared project test command (for this repository: `python3 scripts/check_skills.py` and `python3 -m unittest discover -s tests -p 'test_*.py'`), plus `git diff --check`. These commands validate packaging here, not substantive review quality.
+
+Bind check/review results to candidate, accepted baseline, criteria and evidence context. Adjudicate supported, unsupported and unresolved findings; changed content or context invalidates affected evidence/authorization. Reconcile if another writer or main movement is observed; do not overwrite it. Single-writer agreement is not a race-free technical guarantee.
+
+## Authorized acceptance only
+
+Commands are guidance, not authorization to execute. If this task forbids commit/push, stop with the exact reviewed candidate and an Unresolved acceptance outcome. Successful checks alone cannot confer authority.
+
+When designated authority explicitly permits ordinary Git acceptance, recheck actual main, candidate, staged content, criteria, evidence and authority. Use `git add -- <explicit scoped paths>`, inspect `git diff --cached` and `git status`, then `git commit -m '<authorized intent>'` only for the authorized content. If a path mixes unrelated changes, separate the scoped staging safely or stop; never use blanket `git add .`. Record the resulting full commit ID, inspect its actual content and confirm `refs/heads/main` names that exact authorized result before reporting Accepted. A commit elsewhere or a pre-existing candidate commit is not acceptance. If ordinary Git cannot perform the authorized advancement safely, report Unresolved rather than introduce advanced plumbing or overwrite work. Push needs separate authority.
+
+Correct accepted mistakes by a new scoped task and authorized corrective commit. Never amend, rebase, reset or force-push accepted history to erase a decision. A supplied linear log does not prove no rewrite, exclusivity, intent or historical authority; unavailable witnesses remain Unknown.
+
+## Scratch and learning
+
+Beads holds durable records. Owned ignored `.scratchpad/` remains an ephemeral adjunct with owner, recovery pointers and retention deadline recorded before use; promote needed evidence to Beads before deleting only owned temporary files. Missing scratch-dependent evidence is Unknown. Ignore is not secrecy, untracking, backup exclusion or secure deletion; do not store secrets. Existing `.ooda/` remains unchanged.
+
+Use [scenario evals](SCENARIO-EVALS.md) to inspect action/evidence traces. Findings are learning signals, not bespoke enforcement or demonstrated model effectiveness. [The jj document](JJ-WORKFLOW.md) is retained historical context, not required tooling.

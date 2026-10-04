@@ -30,7 +30,8 @@ th,td { padding:.5rem; text-align:left; vertical-align:top; } li { margin:.75rem
 </nav>
 <p>This is the normative protocol; the template records its application. Documentation, not executable workflows,
 runtime enforcement, implemented security, a calibrated metric or a convergence proof. Substantive judgement and
-designated acceptance authority remain necessary. Exactly one active task at any time.</p>
+designated acceptance authority remain necessary. Exactly one active task, one named drafter and one active candidate
+at any time; observers and reviewers may work in parallel without editing that candidate.</p>
 <h2 id="environment">Structured environment</h2>
 <p><strong>Scratchpad</strong> Beads is durable cross-agent memory and communication for intent, status, findings,
 decisions, uncertainties and evidence references. Workspace-local <code>.scratchpad/</code> is an ephemeral adjunct,
@@ -40,21 +41,19 @@ recorded deadline. Interrupted work retains those recovery pointers; missing scr
 Ignore excludes default new-file tracking, not already-tracked files, forced additions, secrecy, backups or cleanup.
 Do not place secrets there; redact evidence before durable storage. Existing <code>.ooda/</code> remains unchanged.</p>
 <p><strong>Current state</strong> Uniquely resolved exact accepted main commit: current authority, not proof of
-quality/historical substantive acceptance. In Git-only work resolve <code>refs/heads/main</code>, not arbitrary checkout HEAD.
-In jj work require a unique local <code>main</code> bookmark target and, for a Git-backed repository, agreement with
-<code>refs/heads/main</code>; record full commit ID and resolution context. Missing, conflicted, multiple or stale targets
-are Unknown/Unresolved: never fall back to <code>@</code>, <code>HEAD</code>, <code>trunk()</code> or a remote last-seen bookmark.</p>
+quality/historical substantive acceptance. Resolve <code>refs/heads/main</code>, not arbitrary checkout HEAD;
+record full commit ID and resolution context. Missing or stale accepted state is Unknown/Unresolved:
+never fall back to <code>HEAD</code> or a remote last-seen position.</p>
 <p><strong>History</strong> Git main, trunk-based; advancement follows <a href="#authority">authority</a>.</p>
-<p><strong>Candidate</strong> Scoped uncommitted Git content or a mutable committed jj candidate stack, bound to exact
-accepted main base/content identity. Transitional repository work, not a second codebase; snapshot/commit existence is not acceptance.</p>
-<p id="candidate-stack">For the jj workflow use a linear stack rooted at accepted commit A, with exact ordered full
-commit IDs C1…Cn, each sole parent, trees and introduced scoped changes (including new files/deletions). Record every
-introduced revision/content, not just the top diff. Merge/nonlinear or unrelated ancestry is outside this workflow and
-remains Unresolved pending separate scope/authority. A→C1→C2 requires authority for both C1 and C2 to advance to C2;
-approval of C1 alone permits only the exact C1 prefix. Rewriting C1 to C1′ or rebasing/reparenting descendants changes
-commit identities and invalidates affected checks/authorization; resolve and review the resulting stack anew.
-After prefix acceptance, reconcile remaining descendants against the new accepted base before further work.
-Change IDs, <code>@</code> and bookmark names do not identify immutable content.</p>
+<p><strong>Candidate</strong> One scoped Git candidate, bound to exact accepted main base/content identity.
+Transitional repository work, not a second codebase; snapshot/commit existence is not acceptance.</p>
+<p id="candidate-stack">Use <a href="GIT-WORKFLOW.md">ordinary Git</a>: inspect status, diff, staged diff and log;
+draft and run declared tests; review exact content; add explicit scoped paths and commit only when designated authority
+permits. No jj, candidate stack, feature branch, advanced Git plumbing, bespoke gate, lock, permission system or daemon
+is required. If candidate commits already exist, record their full IDs and introduced content, not merely a net diff.
+Changed candidate/base/context invalidates affected evidence and authorization. Preserve unrelated staged, unstaged and
+untracked work; unavailable identities remain Unknown. This cooperative workflow cannot prevent external copies,
+offline edits or noncooperating writers.</p>
 <p>Only the repository is a codebase. Record scope/preserve unrelated edits; identify exact content, not filenames,
 by reproducible scoped path/change digest/snapshot including new files/deletions.
 See <a href="#reconciliation">reconciliation</a>/<a href="#derivation">evidence derivation</a>.</p>
@@ -139,7 +138,7 @@ halt all new substantive work, including checks, repairs, review, adjudication a
 operation may finish; interrupted acceptance follows <a href="#reconciliation">reconciliation</a>.</p>
 <p>The reserve funds only its predeclared bounded minimal outcome report, main/candidate reconciliation from existing records,
 findings/evidence pointers, accounting and upward return; not new evidence, repair, finding decisions or advancement.
-If acceptance has not occurred preserve main and the separate exact candidate (uncommitted content or committed stack). If accounting/identity cannot
+If acceptance has not occurred preserve main and the separate exact candidate (scoped content or existing candidate commits). If accounting/identity cannot
 be reconciled from existing records, report Unknown and stop, not invented spending permission. Resume retains initial
 allocations/every charge; later allowance needs explicit commander authorization and a recorded extension, never erased
 consumption. The reserve affords bounded reporting, not host availability.</p>
@@ -170,13 +169,13 @@ claiming old obligations hold. Prune redundancy, not protected obligations/manda
 <p>Designated authority authorizes exact candidate content, expected exact main baseline, criteria/evidence context and scope
 from <a href="#readiness">readiness</a>. Changes to candidate/baseline/criteria/evidence invalidate affected authorization;
 conclusions follow <a href="#derivation">derivation</a>. Recheck those identities/context/scope and authority before the
-verified authorized advancement of main, respecting <a href="#environment">scoped edits</a>. For a jj stack authorization
-covers the exact ordered revisions, parents and all introduced prefix content, not just the top revision or net diff.
-Candidate commits can already exist: creation is not this acceptance boundary. Before advancement exclude other repository
-writers (including Git/jj/IDE/background fetch) by an externally established procedure and recheck the actual accepted
-locator, expected baseline, full stack and context. Without writer exclusion do not claim race-free acceptance; this
-document implements no lock or compare-and-swap. After advancement confirm exact content and uniquely resolved resulting
-accepted main commit, including the Git-backed main agreement, before claiming Accepted, never merely from intent. Denied/stale/interrupted
+verified authorized advancement of main, respecting <a href="#environment">scoped edits</a> and task operation limits.
+Candidate commits can already exist: creation is not this acceptance boundary. Agree on one cooperative drafter;
+parallel observers/reviewers do not write the candidate. Recheck actual accepted main, expected baseline, candidate,
+staged content and context before authorized ordinary Git add/commit. No race-free acceptance or implemented exclusion
+is claimed; unexpected writers/main movement require reconciliation, not overwrite. After advancement confirm exact
+content and uniquely resolved resulting accepted main commit before claiming Accepted, never merely from intent.
+Commit/push forbidden or authority absent means preserve the candidate without advancement. Denied/stale/interrupted
 acceptance is Unresolved; rejected/unresolved candidates do not advance through this protocol.
 Use <a href="#reconciliation">reconciliation</a> for interruptions/main movement.</p>
 <p>Edits-only or candidate commits: verified work awaits review/designated advancement authority, not Accepted. First acceptance requires
@@ -193,7 +192,7 @@ These general stops are not all drawn.</p>
 <figure class="diagram" tabindex="0" role="group" aria-label="Scrollable SCAR environment and progression">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 1180" role="img" aria-labelledby="svg-title svg-desc">
 <title id="svg-title">Structured environment: Scratchpad, Current state, History, Candidate and SCAR lifecycle</title>
-<desc id="svg-desc">Four components organize the Structured environment. Beads is durable memory and communication; .scratchpad is an owned ephemeral adjunct, neither codebase nor acceptance authority. Current state is the uniquely resolved exact accepted main commit, not working-copy @ or arbitrary HEAD and not proof of historical quality. History is trunk-based Git main. Candidate is scoped uncommitted content or a mutable committed jj stack with exact accepted base, ordered revisions, parents and introduced content; commits alone are not acceptance. Only the repository is a codebase; preserve unrelated edits. Six documentary lifecycle positions follow, not executable components. Frame, construct, check and resolve findings; refinement returns to understanding or construction, rejected or unresolved work finishes. Eligible work needs exact authority, writer exclusion and main advancement confirmation, then outcome recording before the next task. General stops without acceptance are not all drawn. The numbered lifecycle governs.</desc>
+<desc id="svg-desc">Four components organize the Structured environment. Beads is durable memory and communication; .scratchpad is an owned ephemeral adjunct, neither codebase nor acceptance authority. Current state is the uniquely resolved exact accepted main commit, not arbitrary HEAD and not proof of historical quality. History is trunk-based Git main. One drafter owns one scoped Git candidate with exact accepted base and content; commits alone are not acceptance. Parallel observers and reviewers do not edit it. Only the repository is a codebase; preserve unrelated edits. Six documentary lifecycle positions follow, not executable components. Frame, construct, check and resolve findings; refinement returns to understanding or construction, rejected or unresolved work finishes. Eligible work needs exact authority and main advancement confirmation, then outcome recording before the next task. No enforced writer exclusion is claimed. General stops without acceptance are not all drawn. The numbered lifecycle governs.</desc>
 <rect id="structured-environment" class="enclosure" x="10" y="10" width="1020" height="1160" rx="14"/>
 <text class="heading" x="35" y="45">Structured environment</text>
 <text class="sub" x="35" y="72">Enclosures group roles; only arrowheads denote lifecycle transitions. No execution architecture is implied.</text>
@@ -203,8 +202,8 @@ These general stops are not all drawn.</p>
 <g id="candidate-component">
 <rect class="card" x="55" y="145" width="655" height="72" rx="10"/>
 <text class="label" x="70" y="169">Candidate</text>
-<text class="sub" x="70" y="190">Uncommitted content or mutable committed jj stack</text>
-<text class="sub" x="70" y="211">Exact base / revisions / parents / content · not Accepted</text>
+<text class="sub" x="70" y="190">One drafter / one scoped ordinary-Git candidate</text>
+<text class="sub" x="70" y="211">Exact base / content · commits alone are not Accepted</text>
 </g>
 <g id="current-state-component">
 <rect class="card" x="55" y="223" width="655" height="72" rx="10"/>
@@ -270,8 +269,8 @@ not six implemented services. Repository components do not add lifecycle positio
 ephemeral adjunct under the environment's retention/recovery/secrets limits. Neither confers acceptance authority.</li>
 <li><strong>Current state:</strong> uniquely resolved exact accepted main commit is current authority, not arbitrary HEAD or proof of historical quality.</li>
 <li><strong>History:</strong> Git main, trunk-based; advancement follows <a href="#authority">authority</a>.</li>
-<li><strong>Candidate:</strong> scoped uncommitted content or mutable committed jj stack with exact accepted base,
-ordered revisions/parents/introduced content; transitional and not Accepted merely because committed.</li>
+<li><strong>Candidate:</strong> one scoped Git candidate with exact accepted base/content; one drafter,
+parallel observation/review, transitional and not Accepted merely because committed.</li>
 </ul>
 </section>
 </main></html>
