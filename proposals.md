@@ -61,6 +61,12 @@ Inspected sf-sdlc definitions use `attended-app` for CLI/terminal applications a
 - Unattended profile: relevant resource ownership, admission, cancellation, shutdown and persistence/recovery contracts.
 - Actual repository policy supplies toolchains, verification commands and binding limits; sample template settings must not become universal defaults.
 
+**Reference for discussion:** reusable attended-tool outcome guidance is owned
+by `~/.config/opencode/AGENTS.md` § Attended-tool outcomes. Consult that owner
+when evaluating this proposed profile; do not create a competing doctrine here.
+This reference does not adopt the profiles or change SCAR's normative algorithm,
+protected obligations, required Unknown evidence, or acceptance authority.
+
 **Benefit:** removes operational Rust assumptions from general reasoning without adding core stages or a roster.
 
 **Risk:** taxonomy or duplicated policy could overconstrain targets. Apply checks only to actual ownership boundaries.
