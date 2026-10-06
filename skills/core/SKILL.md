@@ -5,7 +5,7 @@ description: Apply concrete techniques to all seven SCAR review questions.
 # Core review techniques
 
 ## Applicability
-Consider all seven aspects for every SCAR task, including review targets. Declare task-specific criteria and justified omissions; selecting profiles never removes this obligation. Read the [protocol](../../ALGORITHM.html#aspects) before assessment.
+Consider all seven aspects for every SCAR task, including review targets. Declare task-specific criteria and justified omissions; selecting profiles never removes this obligation. Optional scoped lenses are evidence-seeking prompts, never diagnosed failures, additional aspects or verdict rows. Read the [protocol](../../ALGORITHM.html#aspects) before assessment.
 
 ## Techniques
 | Aspect | Concrete inspection | Counterexample to seek |

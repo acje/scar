@@ -12,7 +12,7 @@ Declare the full accepted history baseline ID and observation context. After tha
 
 ## Draft, check and review
 
-The drafter makes small coherent increments within the one candidate. Observers/reviewers inspect exact content and return evidence/findings, not competing edits. Run the task's declared checks plus `git diff --check`. This repository supplies documentation, not a packaging checker or test runner: inspect tracked references with `git grep` and manually compare local Markdown/HTML link targets and fragments with tracked files and HTML IDs. Record coverage and gaps; whitespace/reference/link inspection is not substantive review or model effectiveness.
+The drafter makes small coherent increments within the one candidate. Observers/reviewers inspect exact content and return evidence/findings, not competing edits. Run the task's declared checks. This repository supplies documentation, not a packaging checker or test runner: inspect tracked references with `git grep` and manually compare local Markdown/HTML link targets and fragments with tracked files and HTML IDs. Record coverage and gaps; reference/link inspection is not substantive review or model effectiveness.
 
 Bind check/review results to candidate, accepted baseline, criteria and evidence context. Adjudicate supported, unsupported and unresolved findings; changed content or context invalidates affected evidence/authorization. Reconcile if another writer or main movement is observed; do not overwrite it. Single-writer agreement is not a race-free technical guarantee.
 

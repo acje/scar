@@ -39,11 +39,20 @@ not an alternate codebase or authority. Its task owner records ownership, recove
 Beads before use; promote necessary evidence to Beads before deleting only owned temporary files at task close or the
 recorded deadline. Interrupted work retains those recovery pointers; missing scratch files make dependent evidence Unknown.
 Ignore excludes default new-file tracking, not already-tracked files, forced additions, secrecy, backups or cleanup.
-Do not place secrets there; redact evidence before durable storage. Existing <code>.ooda/</code> remains unchanged.</p>
+Do not place secrets there; redact evidence before durable storage. Existing <code>.ooda/</code> remains unchanged.
+Delegated or cascading operational intent recorded here is direction within the governing intent, never authorization;
+it cannot alter acceptance or protected obligations. Record provenance (source, governing-intent identity, delegation
+chain), references, recovery pointers and residual uncertainty. Express the intent chain governing purpose → local
+contribution → bounds of initiative: purpose flows downward, facts and verified effects flow upward; state the local
+contribution and explicit initiative bounds. Reconcile the governing intent and propagated direction on delegation,
+resume or material drift.</p>
 <p><strong>Current state</strong> Uniquely resolved exact accepted main commit: current authority, not proof of
 quality/historical substantive acceptance. Resolve <code>refs/heads/main</code>, not arbitrary checkout HEAD;
 record full commit ID and resolution context. Missing or stale accepted state is Unknown/Unresolved:
-never fall back to <code>HEAD</code> or a remote last-seen position.</p>
+never fall back to <code>HEAD</code> or a remote last-seen position. The exact accepted main carries an identified
+governing intent document appropriate to the actual subject (do not invent a separate accepted intent file; for a SCAR
+protocol task this is normally the normative ALGORITHM.html and its record companions); record that governing-intent
+identity with the accepted commit ID and bind delegated intent to it.</p>
 <p><strong>History</strong> Git main, trunk-based; advancement follows <a href="#authority">authority</a>.
 Declare the full accepted history baseline ID and observation context. After that declared baseline, every accepted
 successor is a single-parent append-only commit whose sole parent is the immediately preceding exact accepted main.
@@ -117,7 +126,14 @@ local style precedes labeled provisional defaults and external advice. Resolve b
 owner, not silent substitution. Unsupported subjects or unavailable required guidance remain Unknown; core alone cannot silently
 stand in for missing subject techniques. Guidance/context changes invalidate affected conclusions and authorization through
 <a href="#derivation">derivation</a>. Selection/loading consumes shared precharged <a href="#credits">work</a>, never protected
-return reserve. This is a reading/recording obligation within existing positions, not a runtime loader, new stage or acceptance actor.</p>
+return reserve. This is a reading/recording obligation within existing positions, not a runtime loader, new stage or acceptance actor.
+Distinguish aspect (a fixed review question) from concern (an additional criterion) from technique (a skill's concrete
+inspection) from optional scoped lens (an indexing/diagnostic category). Optional scoped lenses such as bureaucracy/goal
+displacement, recursive proof loops, doghouse-to-moonbase scope creep, context-poor authorization/following orders,
+misinformation contagion and coordination activity-progress decoupling are evidence-seeking prompts, not diagnosed
+failures; they require explicit applicability and never become universal verdict rows, seats or obligations. Select
+concerns/lenses by scoped applicability; binding task/protected criteria cannot be waived by omission, and lenses
+supply evidence-seeking prompts that themselves create no extra obligations.</p>
 <p id="readiness">Within 4 (no extra position), one compact record: exact candidate/base, current required evidence/conclusions,
 resolved required findings, remaining bounded-attempt acceptance credit/blockers. Eligibility: required criteria, supported repairs,
 <a href="#comparison">protected comparison</a>.</p>
@@ -131,9 +147,11 @@ If main moved, reconcile—not overwrite—and obtain applicable <a href="#autho
 <p>Before substantive work declare finite positive initial work and separate finite positive protected return reserve in
 scratchpad, bounded operation scopes and fixed positive heterogeneous prices. These are task-specific conventions, not
 time, energy or production-cost defaults. Framing, evidence gathering, orientation, edits, checks, substantive review,
-justified review descendants, adjudication, revalidation and acceptance attempts all consume work. All participants/attempts
+justified review descendants, guidance, focused assignment integration, adjudication, revalidation and acceptance attempts all
+consume work. All participants/attempts
 share one account: debit before each operation; failure/interruption retains the charge. No refunds or silent reset on
-retry, review, role change or resume. At its scope limit an operation stops; further work needs another affordable precharged operation.</p>
+retry, review, role change or resume. Justified research that reduces required uncertainty is progress, not waste; it still
+consumes shared work, never the protected return reserve. At its scope limit an operation stops; further work needs another affordable precharged operation.</p>
 <p>At 80% of initial work consumed, or before an affordable proposed charge reaches or crosses it, strongly signal
 prepare-to-return; record reason and bounded closure plan, preferring justified closure over expansion. This never relaxes
 acceptance criteria/authority. Admit only affordable operations within intent. At zero work or insufficient remaining work,
@@ -149,9 +167,17 @@ consumption. The reserve affords bounded reporting, not host availability.</p>
 evidence/uncertainty/findings, initial/spent/remaining work and reserve, next affordable action, and conditions/authority to resume.</p>
 <h3 id="mission-command">Mission command</h3>
 <p>The commander sets intent/constraints/success criteria/allowance; the executor adapts creatively within them, reporting
-verified effects. Command differs from acceptance authority. Fleet mapping: Moltke owns tasking/re-decomposition/closeout;
+verified effects. Governing purpose → local contribution → bounds of initiative: purpose flows downward, facts and
+verified effects flow upward, and neither direction changes acceptance or protected obligations automatically. Command
+differs from acceptance authority. Fleet mapping: Moltke owns tasking/re-decomposition/closeout;
 Hopper executes; evidence/orientation roles inform decisions. Not a compulsory roster or extra stage. Routine adaptation
 stays local; material strategic Surprise/Opportunity goes upward rather than silently expanding scope/credit.</p>
+<p>Focused review assignments default to one aspect per reviewer at a time; the same reviewer may handle multiple sequential
+assignments, with no distinct-agent mandate, seats, roster, acceptance actor or extra stage. Record each assignment's owner
+and aspect, question, scope, exact candidate/base and context, common intent/constraints, specialized guidance and evidence,
+findings, coverage, Unknowns and dependencies, and shared work charge; splitting never applies to drafting. Findings integrate
+within an existing role, normally the finding decision-maker at position 4, resolving duplicates, conflicts, shared premises,
+cross-aspect interactions and gaps without voting or averaging and without waiving a required Unknown.</p>
 <p>A material BackBrief records <code>trigger</code> (Surprise | Opportunity), <code>scope</code>
 (OutsideMission | PackageLevel | SystemLevel), cited <code>observation</code>, <code>intent_relevance</code>,
 <code>local_action</code>, <code>requested_response</code> (Acknowledge | AdjustIntent | ReDecompose | EscalateToUser),
@@ -185,6 +211,8 @@ Use <a href="#reconciliation">reconciliation</a> for interruptions/main movement
 <p>Edits-only or candidate commits: verified work awaits review/designated advancement authority, not Accepted. First acceptance requires
 <a href="#readiness">eligibility</a> even without past main quality evidence; syntax alone is insufficient.
 Corrections append authorized single-parent commits, never erase decisions; mistaken acceptance needs a new corrective task.
+A consequential correction identifies its known affected consumers, correction responsibility and propagation uncertainty;
+affected records refresh or remain Unknown.
 Never rewrite, amend, rebase, reset or force-push accepted history after the declared baseline.</p>
 <p><a href="SOURCES.md">Sources and gaps</a> · <a href="REVIEW-TEMPLATE.md">Template</a></p>
 <p>No external assets, scripts or runtime dependencies.</p>
@@ -197,7 +225,7 @@ These general stops are not all drawn.</p>
 <figure class="diagram" tabindex="0" role="group" aria-label="Scrollable SCAR environment and progression">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 1180" role="img" aria-labelledby="svg-title svg-desc">
 <title id="svg-title">Structured environment: Scratchpad, Current state, History, Candidate and SCAR lifecycle</title>
-<desc id="svg-desc">Four components organize the Structured environment. Beads is durable memory and communication; .scratchpad is an owned ephemeral adjunct, neither codebase nor acceptance authority. Current state is the uniquely resolved exact accepted main commit, not arbitrary HEAD and not proof of historical quality. History is trunk-based Git main: accepted successors after a declared baseline are single-parent append-only, each parent the preceding exact accepted main, with no merges or accepted-history rewriting. Inherited history is not certified. One drafter owns one scoped Git candidate with exact accepted base and content; commits alone are not acceptance. Parallel observers and reviewers do not edit it. Only the repository is a codebase; preserve unrelated edits. Six documentary lifecycle positions follow, not executable components. Frame, construct, check and resolve findings; refinement returns to understanding or construction, rejected or unresolved work finishes. Eligible work needs exact authority, sole-parent and main advancement confirmation, then outcome recording before the next task. No enforced writer exclusion is claimed. General stops without acceptance are not all drawn. The numbered lifecycle governs.</desc>
+<desc id="svg-desc">Four components organize the Structured environment. Beads is durable memory and communication carrying cascading operational intent and its provenance/recovery references; .scratchpad is an owned ephemeral adjunct, neither codebase nor acceptance authority. Current state is the uniquely resolved exact accepted main commit carrying the identified governing intent document, not arbitrary HEAD and not proof of historical quality. History is trunk-based Git main: accepted successors after a declared baseline are single-parent append-only, each parent the preceding exact accepted main, with no merges or accepted-history rewriting. Inherited history is not certified. One drafter owns one scoped Git candidate with exact accepted base and content; commits alone are not acceptance. Parallel observers and reviewers do not edit it. Only the repository is a codebase; preserve unrelated edits. Six documentary lifecycle positions follow, not executable components. Frame, construct, check and resolve findings; refinement returns to understanding or construction, rejected or unresolved work finishes. Eligible work needs exact authority, sole-parent and main advancement confirmation, then outcome recording before the next task. No enforced writer exclusion is claimed. General stops without acceptance are not all drawn. The numbered lifecycle governs.</desc>
 <rect id="structured-environment" class="enclosure" x="10" y="10" width="1020" height="1160" rx="14"/>
 <text class="heading" x="35" y="45">Structured environment</text>
 <text class="sub" x="35" y="72">Enclosures group roles; only arrowheads denote lifecycle transitions. No execution architecture is implied.</text>
@@ -214,7 +242,7 @@ These general stops are not all drawn.</p>
 <rect class="card" x="55" y="223" width="655" height="72" rx="10"/>
 <text class="label" x="70" y="247">Current state</text>
 <text class="sub" x="70" y="268">Unique exact accepted main commit: current authority</text>
-<text class="sub" x="70" y="288">Not proof of quality or historical substantive acceptance</text>
+<text class="sub" x="70" y="288">Carries identified governing intent doc · not proof of quality/historical acceptance</text>
 </g>
 <g id="history-component">
 <rect class="card" x="55" y="301" width="655" height="72" rx="10"/>
@@ -229,7 +257,7 @@ These general stops are not all drawn.</p>
 <rect class="scratchpad" x="750" y="95" width="255" height="325" rx="10"/>
 <text class="heading" x="770" y="128">Scratchpad</text>
 <text class="label" x="770" y="158">Beads + ephemeral adjunct</text>
-<text class="sub" x="770" y="193">Intent · status · findings</text>
+<text class="sub" x="770" y="193">Cascading intent · status · findings</text>
 <text class="sub" x="770" y="217">Decisions · uncertainties</text>
 <text class="sub" x="770" y="241">Owned .scratchpad pointers</text>
 <text class="label" x="770" y="285">Not a codebase</text>
@@ -270,9 +298,9 @@ identify exact content by reproducible scoped digest/snapshot, including new fil
 <a href="#lifecycle">lifecycle positions and their transition conditions</a> are documentary protocol guidance,
 not six implemented services. Repository components do not add lifecycle positions or acceptance actors.</p>
 <ul>
-<li><strong>Scratchpad:</strong> Beads stores durable cross-agent records; owned workspace-local .scratchpad is an
-ephemeral adjunct under the environment's retention/recovery/secrets limits. Neither confers acceptance authority.</li>
-<li><strong>Current state:</strong> uniquely resolved exact accepted main commit is current authority, not arbitrary HEAD or proof of historical quality.</li>
+<li><strong>Scratchpad:</strong> Beads stores durable cross-agent records and cascading operational intent with its provenance/recovery references; owned workspace-local .scratchpad is an
+ephemeral adjunct under the environment's retention/recovery/secrets limits. Neither confers acceptance authority; cascading intent is direction, not authority.</li>
+<li><strong>Current state:</strong> uniquely resolved exact accepted main commit is current authority and carries the identified governing intent document, not arbitrary HEAD or proof of historical quality.</li>
 <li><strong>History:</strong> Git main, trunk-based; after the declared baseline, authorized accepted successors are
 single-parent append-only, sole parent the preceding exact accepted main; no merges or accepted-history rewriting.
 Inherited history is not certified; advancement follows <a href="#authority">authority</a>.</li>

@@ -16,4 +16,4 @@ Select and actually read applicable guidance before assessment; record exact loa
 
 Beads remains durable cross-agent authority for records. `.scratchpad/` is an owned, ignored workspace-local ephemeral adjunct, not a second codebase or acceptance store; `.ooda/` is unchanged. Candidate commits do not imply acceptance. Ordinary Git is sufficient; no bespoke controls or enforced writer exclusion is required. Doctrine and scenario evals guide cooperative agents, not arbitrary external/offline writers.
 
-Local documentation checks: `git diff --check`, tracked-reference inspection with `git grep`, and manual comparison of local Markdown/HTML link targets and fragments with tracked files and HTML IDs. No packaging checker or test runner is supplied; these inspections do not prove substantive quality, runtime loading or model effectiveness.
+Local documentation checks: tracked-reference inspection with `git grep`, and manual comparison of local Markdown/HTML link targets and fragments with tracked files and HTML IDs. No packaging checker or test runner is supplied; these inspections do not prove substantive quality, runtime loading or model effectiveness.

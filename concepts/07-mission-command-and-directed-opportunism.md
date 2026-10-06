@@ -8,6 +8,12 @@ The commander sets intent, constraints, success criteria and allowance.
 The executor adapts within them and reports verified effects. Routine adaptation
 stays local; material Surprise or Opportunity goes upward, not into silent scope growth.
 Command authority is distinct from designated acceptance authority.
+Delegated operational intent is direction within the governing intent, never authorization;
+governing purpose flows downward, facts and verified effects upward. Focused review
+assignments default to one aspect per reviewer, the same reviewer may take multiple sequential
+assignments with no distinct-agent mandate; findings integrate at position 4 through the finding
+decision-maker within existing roles, resolving duplicates, conflicts, shared premises,
+cross-aspect interactions and gaps without voting or averaging.
 
 A material BackBrief carries trigger, scope, cited observation, intent relevance,
 local action, requested response and confidence. A request recommends, not authorizes.
