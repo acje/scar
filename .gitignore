@@ -5,6 +5,11 @@
 .beads-credential-key
 .beads/proxieddb/
 *.gate.lock*
+
+# Passive beads exports (local durable coordination data; never published)
+/.beads/interactions.jsonl
+/.beads/issues.jsonl
+
 /.scratchpad/
 
 /.ooda/
